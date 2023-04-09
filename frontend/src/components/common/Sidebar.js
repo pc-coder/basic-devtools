@@ -1,12 +1,13 @@
 import { Box, Flex, Icon, Link, Text, useColorModeValue } from '@chakra-ui/react';
 import React from 'react';
-import { FiAlignLeft, FiAlignRight } from 'react-icons/fi';
+import { FiAlignLeft, FiAlignRight, FiEye, FiList } from 'react-icons/fi';
 import ThemeSwitcher from './ThemeSwitcher';
 
 const LinkItems = [
   { name: 'Base64 Encoder', icon: FiAlignLeft, linkPath: '/app/base64-encoder' },
   { name: 'Base64 Decoder', icon: FiAlignRight, linkPath: '/app/base64-decoder' },
-  { name: 'JSON Viewer', icon: FiAlignRight, linkPath: '/app/json-viewer' },
+  { name: 'JSON Viewer', icon: FiEye, linkPath: '/app/json-viewer' },
+  { name: 'Dedupe', icon: FiList, linkPath: '/app/dedupe' },
 ];
 
 export default function SimpleSidebar({ children }) {
