@@ -4,6 +4,7 @@ import { ChakraProvider } from '@chakra-ui/react';
 import Base64Encoder from './base64Encoder/Base64Encoder';
 import Base64Decoder from './base64Decoder/Base64Decoder';
 import Default from './default/Default';
+import JsonViewer from "./jsonViewer/JsonViewer";
 import SimpleSidebar from './common/Sidebar';
 import { Route, Routes } from 'react-router-dom';
 import theme from './common/theme';
@@ -16,6 +17,7 @@ const App = () => {
           <Routes>
             <Route path='app/base64-encoder' element={<Base64Encoder />} />
             <Route path='app/base64-decoder' element={<Base64Decoder />} />
+            <Route path='app/json-viewer' element={<JsonViewer />} />
             <Route path='*' element={<Default />} />
           </Routes>
         </SimpleSidebar>

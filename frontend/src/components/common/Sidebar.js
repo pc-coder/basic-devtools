@@ -6,6 +6,7 @@ import ThemeSwitcher from './ThemeSwitcher';
 const LinkItems = [
   { name: 'Base64 Encoder', icon: FiAlignLeft, linkPath: '/app/base64-encoder' },
   { name: 'Base64 Decoder', icon: FiAlignRight, linkPath: '/app/base64-decoder' },
+  { name: 'JSON Viewer', icon: FiAlignRight, linkPath: '/app/json-viewer' },
 ];
 
 export default function SimpleSidebar({ children }) {
