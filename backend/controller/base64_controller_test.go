@@ -37,10 +37,10 @@ func (suite *Base64ControllerTestSuite) TearDownTest() {
 
 func (suite *Base64ControllerTestSuite) Test_Encode() {
 	base64EncodeRequestBody := models.Base64EncodeRequest{
-		Payload: "Abc",
+		Payload: "Abc@202111",
 	}
 	expectedBase64EncodeResponseBody := models.Base64EncodeResponse{
-		TransformedPayload: "QWJj",
+		TransformedPayload: "QWJjQDIwMjExMQ==",
 	}
 	requestAsString, err := json.Marshal(base64EncodeRequestBody)
 	suite.Nil(err)
@@ -56,10 +56,10 @@ func (suite *Base64ControllerTestSuite) Test_Encode() {
 
 func (suite *Base64ControllerTestSuite) Test_Decode() {
 	base64EncodeRequestBody := models.Base64DecodeRequest{
-		Payload: "QWJj",
+		Payload: "QWJjQDIwMjExMQ==",
 	}
 	expectedBase64EncodeResponseBody := models.Base64DecodeResponse{
-		TransformedPayload: "Abc",
+		TransformedPayload: "Abc@202111",
 	}
 	requestAsString, err := json.Marshal(base64EncodeRequestBody)
 	suite.Nil(err)

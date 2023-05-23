@@ -27,7 +27,7 @@ func (b base64Controller) Encode(ctx *gin.Context) {
 	}
 
 	response := models.Base64EncodeResponse{
-		TransformedPayload: base64.RawStdEncoding.EncodeToString([]byte(reqPayload.Payload)),
+		TransformedPayload: base64.StdEncoding.EncodeToString([]byte(reqPayload.Payload)),
 	}
 	ctx.JSON(http.StatusOK, response)
 }
@@ -42,7 +42,7 @@ func (b base64Controller) Decode(ctx *gin.Context) {
 		return
 	}
 
-	decodedData, err := base64.RawStdEncoding.DecodeString(reqPayload.Payload)
+	decodedData, err := base64.StdEncoding.DecodeString(reqPayload.Payload)
 	if err != nil {
 		log.Error("Failed to bind request. Error : ", decodeError)
 
