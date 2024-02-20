@@ -15,7 +15,11 @@ const Base64Encoder = () => {
         setBase64encodedValue(data.data.encodedValue);
         setValue(data.data.encodedValue);
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        console.log(error);
+        setBase64encodedValue('');
+        setValue('');
+      });
   };
 
   return (
